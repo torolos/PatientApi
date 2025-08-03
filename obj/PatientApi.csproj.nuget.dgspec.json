@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/Users/dimitris.torolopoulos/source/API-Pad/PatientApi/PatientApi.csproj": {}
+    "/Users/torolos/Projects/PatientApp/src/PatientApi/PatientApi.csproj": {}
   },
   "projects": {
-    "/Users/dimitris.torolopoulos/source/API-Pad/PatientApi/PatientApi.csproj": {
+    "/Users/torolos/Projects/PatientApp/src/PatientApi/PatientApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/dimitris.torolopoulos/source/API-Pad/PatientApi/PatientApi.csproj",
+        "projectUniqueName": "/Users/torolos/Projects/PatientApp/src/PatientApi/PatientApi.csproj",
         "projectName": "PatientApi",
-        "projectPath": "/Users/dimitris.torolopoulos/source/API-Pad/PatientApi/PatientApi.csproj",
-        "packagesPath": "/Users/dimitris.torolopoulos/.nuget/packages/",
-        "outputPath": "/Users/dimitris.torolopoulos/source/API-Pad/PatientApi/obj/",
+        "projectPath": "/Users/torolos/Projects/PatientApp/src/PatientApi/PatientApi.csproj",
+        "packagesPath": "/Users/torolos/.nuget/packages/",
+        "outputPath": "/Users/torolos/Projects/PatientApp/src/PatientApi/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/dimitris.torolopoulos/.nuget/NuGet/NuGet.Config"
+          "/Users/torolos/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -44,9 +47,17 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.1, )"
+            },
             "MediaTR": {
               "target": "Package",
               "version": "[13.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -60,6 +71,10 @@
               "target": "Package",
               "version": "[9.0.7, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
             "Microsoft.EntityFrameworkCore.Sqlite.Core": {
               "target": "Package",
               "version": "[9.0.7, )"
@@ -68,9 +83,17 @@
               "target": "Package",
               "version": "[9.0.7, )"
             },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
             }
           },
           "imports": [
