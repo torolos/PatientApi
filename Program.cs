@@ -3,6 +3,7 @@ using MediatR;
 using PatientApi.Services.Interfaces;
 using PatientApi.DataContext;
 using PatientApi.Services;
+using PatientApi.Filters;
 
 namespace PatientApi
 {
@@ -17,6 +18,10 @@ namespace PatientApi
 
             // --- Distributed cache (Redis) ---
             var redisConfig = builder.Configuration.GetConnectionString("Redis") ?? "localhost:6379";
+            builder.Services.AddMemoryCache(options =>
+            {
+                options.SizeLimit = 10000;
+            });
             builder.Services.AddStackExchangeRedisCache(options =>
             {
                 options.Configuration = redisConfig;
@@ -57,7 +62,7 @@ namespace PatientApi
             //     options.Filters.Add<TokenIntrospectionFilter>();
             //     options.Filters.Add<AuditTrailFilter>();
             // }).AddFluentValidation();
-
+            builder.Services.AddControllers();
             builder.Services.AddAuthorization();
             builder.Services.AddMediatR(typeof(Program));
             // builder.Services.AddValidatorsFromAssemblyContaining<Program>();

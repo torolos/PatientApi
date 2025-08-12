@@ -14,7 +14,7 @@ namespace PatientApi.Services
         protected readonly PatientDbContext _context;
         protected readonly ILogger _logger;
 
-        protected PatientPersistenceService(PatientDbContext context, ILogger logger)
+        protected PatientPersistenceService(PatientDbContext context, ILogger<PatientPersistenceService> logger)
         {
             _context = context;
             _logger = logger;

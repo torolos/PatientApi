@@ -4,7 +4,7 @@ namespace PatientApi.Services
 {
     public class SqlServerPersistenceService : PatientPersistenceService
     {
-        public SqlServerPersistenceService(PatientDbContext context, ILogger logger) : base(context, logger)
+        public SqlServerPersistenceService(PatientDbContext context, ILogger<SqlitePatientPersistenceService> logger) : base(context, logger)
         {
         }
     }
